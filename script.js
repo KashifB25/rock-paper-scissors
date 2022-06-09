@@ -1,6 +1,5 @@
 function computerPlay() {
-    const choice = Math.floor(Math.random() * 3)
-    if (choice == 0) return "Rock";
-    else if (choice == 1) return "Paper";
-    else return "Scissors";
+    const choices = ["Rock", "Paper", "Scissors"];
+    let choice = Math.floor(Math.random() * 3);
+    return choices[choice];
 }
