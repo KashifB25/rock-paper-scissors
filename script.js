@@ -1,22 +1,47 @@
-function computerPlay() {
+function getComputerChoice() {
     const choices = ["Rock", "Paper", "Scissors"];
     let choice = Math.floor(Math.random() * 3);
     return choices[choice];
 }
 
 function playRound(playerSelection, computerSelection) {
-    playerChoice = playerSelection.toLowerCase();
-    let winConditon = () => (playerChoice == "rock" && computerSelection == "Scissors") || (playerChoice == "paper" && computerSelection == "Rock") || (playerChoice == "scissors" && computerSelection == "Paper")
-    if (playerChoice === computerSelection.toLowerCase()) {
-        return "It's a tie! Both chose " + playerSelection;
+    let playerChoice = playerSelection.toLowerCase();
+    let computerChoice = computerSelection.toLowerCase();
+    let winConditon = () => (playerChoice == "rock" && computerChoice == "scissors") 
+        || (playerChoice == "paper" && computerChoice == "rock") 
+        || (playerChoice == "scissors" && computerChoice == "paper")
+
+    if (playerChoice === computerChoice) {
+        return 0;
     }
     else if (winConditon()) {
-        return `You Win! ${playerSelection} beats ${computerSelection}`;
+        return 1;
     } else {
-        return `You Lose! ${computerSelection} beats ${playerSelection}`;
+        return -1;
     }
 }
 
-const playerSelection = "Rock";
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+    for (let i = 0; i < 5; i++) {
+        let res = playRound(prompt(), getComputerChoice());
+        if (res == 1) {
+            playerScore++;
+            console.log(`Round ${i + 1}: You Win!`)
+        } else if (res == -1) {
+            computerScore++;
+            console.log(`Round ${i + 1}: You Lose!`)
+        } else {
+            console.log(`Round ${i + 1}: ` + 'Tie!')
+        }
+    }
+    if (playerScore > computerScore) {
+        return "You Win!";
+    } else if (playerScore < computerScore) {
+        return "You Lose!";
+    } else {
+        return "It's a tie!"
+    }
+}
+
+let playerScore = 0;
+let computerScore  = 0;
