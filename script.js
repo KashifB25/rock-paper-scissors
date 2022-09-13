@@ -1,3 +1,8 @@
+let playerScore = 0;
+let computerScore = 0;
+const playerScoreDisplay = document.querySelector('.play-page-gamer--mine-block .play-page-gamer__score');
+const computerScoreDisplay = document.querySelector('.play-page-gamer--computer-block .play-page-gamer__score');
+
 function getComputerChoice() {
     const choices = ["Rock", "Paper", "Scissors"];
     let choice = Math.floor(Math.random() * 3);
@@ -21,27 +26,29 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-        let res = playRound(prompt(), getComputerChoice());
+let round = 1;
+const buttons = document.querySelectorAll('button');
+const result = document.querySelector('#result');
+function game(playerChoice) {
+        let res = playRound(playerChoice, getComputerChoice());
         if (res == 1) {
             playerScore++;
-            console.log(`Round ${i + 1}: You Win!`)
+            //result.innerHTML += `<br>Round ${round + 1}: You Win!\n`;
         } else if (res == -1) {
             computerScore++;
-            console.log(`Round ${i + 1}: You Lose!`)
+            //result.innerHTML += `<br>Round ${round + 1}: You Lose!\n`;
         } else {
-            console.log(`Round ${i + 1}: ` + 'Tie!')
+            //result.innerHTML += `<br>Round ${round + 1}: ` + 'Tie!\n';
         }
-    }
-    if (playerScore > computerScore) {
-        return "You Win!";
-    } else if (playerScore < computerScore) {
-        return "You Lose!";
-    } else {
-        return "It's a tie!"
-    }
+        round++;
 }
 
-let playerScore = 0;
-let computerScore  = 0;
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        let playerChoice = button.textContent;
+        game(playerChoice);
+        playerScoreDisplay.textContent = playerScore;
+        computerScoreDisplay.textContent = computerScore;
+        document.querySelector('.play-page-round').textContent = `Round ${round}`;
+    });
+});
