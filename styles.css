@@ -1,0 +1,103 @@
+html {
+	font-size: 62.5%;
+    line-height: 1.15;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Open Sans",Helvetica,sans-serif;
+	font-size: 1.6rem;
+	color: #fff;
+	letter-spacing: -.5px;
+}
+
+.gradient-container--full-height {
+	min-height: 100vh;
+}
+
+.gradient-container {
+	padding: 3.3vh 0;
+    background: linear-gradient(90deg,#4383c3 40%,#30b4cb 60%);
+    position: relative;
+}
+
+.container--height-adaptive {
+	width: 100%;
+	max-width: 153.85vh;
+}
+
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.play-page-round {
+	margin: 2vh 0 12vh;
+	font-size: 7vh;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.play-page-gamers {
+	display: table;
+	width: 100%;
+}
+
+.play-page-gamer--mine-block{
+	margin-bottom: 10vh;
+}
+
+.play-page-gamer {
+	width: 50%;
+	float: left;
+    text-align: center;
+}
+
+.play-page-gamer__text {
+	margin-bottom: 1.28vh;
+	font-size: 3vh;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+p {
+	margin: 0;
+}
+
+.play-page-gamer__score {
+	margin-bottom: 7vh;
+}
+
+.play-page-gamer__choices {
+	margin-bottom: 7vh;
+    height: 20vh;
+    line-height: 20vh;
+    display: table;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.play-page-gamer__choice-container {
+	width: 33.3333333%;
+	display: inline-block;
+	text-align: center;
+}
+
+button {
+	height: 20vh;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.play-page-gamer__prompt {
+	display: block;
+	font-size: 3vh;
+}
