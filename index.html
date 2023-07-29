@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock-Paper-Scissors</title>
-    <link rel="stylesheet" href="styles.css"> 
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <div class="gradient-container gradient-container--full-height">
-        <div class="container container--height-adaptive">
-            
-        <p class="play-page-round">Round 1</p>
-        <section  class="play-page-gamers">
-            <section class="play-page-gamer play-page-gamer--mine-block">
-                <p class="play-page-gamer__text">Your score</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rock-Paper-Scissors</title>
+        <link rel="stylesheet" href="styles.css"> 
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="gradient-container gradient-container--full-height">
+            <div class="container container--height-adaptive">
+                
+            <p class="play-page-round">Round 1</p>
+            <section  class="play-page-gamers">
+                <section class="play-page-gamer play-page-gamer--mine-block">
+                    <p class="play-page-gamer__text">Your score</p>
 
-                <p class="play-page-gamer__score"></p>
+                    <p class="play-page-gamer__score"></p>
 
-                <div class="play-page-gamer__choices">
-                    <div class="play-page-gamer__choice-container">
-                        <button id='rock'>Rock</button>
+                    <div class="play-page-gamer__choices">
+                        <div class="play-page-gamer__choice-container">
+                            <button id='rock'>Rock</button>
+                        </div>
+                        <div class="play-page-gamer__choice-container">
+                            <button id='paper'>Paper</button>
+                        </div>
+                        <div class="play-page-gamer__choice-container">
+                            <button id='scissors'>Scissors</button>
+                        </div>
                     </div>
-                    <div class="play-page-gamer__choice-container">
-                        <button id='paper'>Paper</button>
-                    </div>
-                    <div class="play-page-gamer__choice-container">
-                        <button id='scissors'>Scissors</button>
-                    </div>
+
+                    <p class="play-page-gamer__prompt">Take your pick</p>
+                    
+                </section>
+                <section class="play-page-gamer play-page-gamer--computer-block">
+                    <p class="play-page-gamer__text">Computer's score</p>
+
+                    <p class="play-page-gamer__score"></p>
+                </section>
+            </section>
+            <section class="play-page-final-screen">
+                <div class="play-page-final-screen__container">
+                    <p class="play-page-final-screen__text"></p>
+                    <p class="play-page-final-screen__score">
+                        <span class="play-page-final-screen__colon">:</span>
+                    </p>
                 </div>
-
-                <p class="play-page-gamer__prompt">Take your pick</p>
-                
             </section>
-            <section class="play-page-gamer play-page-gamer--computer-block">
-                <p class="play-page-gamer__text">Computer's score</p>
 
-                <p class="play-page-gamer__score"></p>
-                
-            </section>
-        </section>
-
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
