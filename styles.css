@@ -101,3 +101,47 @@ button {
 	display: block;
 	font-size: 3vh;
 }
+
+.play-page-final-screen{
+	display: none;
+	background-color: rgba(13, 13, 13, 0);
+	background-image: linear-gradient(0deg, rgba(63, 104, 143, 0.95) 20%, rgba(58, 142, 154, 0.95) 90%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(0deg,rgba(67,131,195,.95) 20%,rgba(48,180,203,.95) 90%);
+}
+
+.play-page-round-result {
+	position: absolute;
+	left:0;
+	bottom: 4vh;
+	width: 100%;
+	font-size: 4vh;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.play-page-final-screen__container {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-60%);
+}
+
+.play-page-final-screen__text {
+	margin-bottom: 1vh;
+	font-size: 5.38vh;
+	font-weight: 700;
+	text-align: center;
+}
+
+.play-page-final-screen__score {
+	margin-bottom: 3.5vh;
+	font-size: 10.9vh;
+	font-weight: 700;
+	text-align: center;
+}
